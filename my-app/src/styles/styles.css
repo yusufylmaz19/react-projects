@@ -1,0 +1,28 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+        width: 200px;
+        height: 350px;
+        background-color: #2b2929;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 5px rgba(255,255,255,.2);
+        color: #fff;
+}
+
+.contact-card>img{
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+}
+
+.info-group{
+    display: flex;
+    margin: 10px;
+}   
