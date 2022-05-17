@@ -1,6 +1,6 @@
 import React from 'react';
 import {ImLocation} from 'react-icons/im';
-
+import '../../styles/travel.css';
 export default function Travel(props) {
     return (
       <>
