@@ -3,24 +3,8 @@ import "../../styles/meme.css";
 import TrollFace from "../Demo4/TrollFace.svg";
 
 export default function Meme() {
+
   const myUrl = "https://api.imgflip.com/get_memes";
-
-  const urlArray = [];
-
-  const getMemeImage = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    getMemeData(data);
-  };
-
-  const getMemeData = async (data) => {
-    data.data.memes.forEach((element) => {
-      const { id, url } = element;
-      urlArray.push({ id, url });
-    });
-  };
-
-  getMemeImage(myUrl);
 
   const [meme, setMeme] = React.useState({
     upText: "",
@@ -28,8 +12,16 @@ export default function Meme() {
     imgUrl: TrollFace,
   });
 
+  const [allMeme, setAllMeme] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(myUrl)
+      .then((res) => res.json())
+      .then((data) => setAllMeme(data.data.memes));
+  }, []);
+
   const getMeme = () => {
-    const memeDataArray = urlArray;
+    const memeDataArray = allMeme;
     const randomNumber = Math.floor(Math.random() * memeDataArray.length);
     const randomUrl = memeDataArray[randomNumber].url;
     setMeme((preMeme) => ({
@@ -38,14 +30,15 @@ export default function Meme() {
     }));
   };
 
-  const  handleChage=(event) =>{
-            const {name, value} = event.target;
-            setMeme((preMeme) => ({
-                ...preMeme,
-                [name]:value
-              }));
-  }
+  const handleChage = (event) => {
+    const { name, value } = event.target;
+    setMeme((preMeme) => ({
+      ...preMeme,
+      [name]: value,
+    }));
+  };
 
+  
   return (
     <main className="memeContainer">
       <header className="memeHeader">
