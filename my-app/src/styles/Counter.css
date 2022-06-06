@@ -1,0 +1,46 @@
+.CounterContainer{
+    width: 600px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.CounterCount,.Counted{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    height:60px;
+    background-color: yellow;
+    padding: 4px;
+}
+
+.Counted{
+    background-color: blue;
+    color:  #fff;
+}
+
+.CounterIncBtn{
+    width: 100px;
+    height: 60px;
+    background-color: rgb(47, 219, 191);
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.CounterTags{
+    width: 100px;
+    height: 60px;
+}
+.CounterTags>li{
+    list-style: none;
+}
