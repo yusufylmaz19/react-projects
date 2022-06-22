@@ -1,0 +1,91 @@
+.taskContainer {
+  width: 550px;
+  height: auto;
+  border: 1px solid gray;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: auto;
+}
+
+.taskNav {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.taskAddButton {
+  width: auto;
+  height: 40px;
+  font-size: 1.4rem;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+.taskHeaderContent {
+  font-size: 32px;
+}
+
+.task {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px 5px 5px 5px;
+  background-color: rgb(240, 240, 240);
+  padding-left: 10px;
+  padding-right: 10px;
+  word-wrap: break-word;
+}
+
+.FaTimes {
+  margin-left: 500px;
+  color: red;
+  cursor: pointer;
+}
+
+.reminder{
+  border-left: 3px solid green;
+}
+
+.taskFormControl{
+  display: flex;
+  flex-direction: column;
+}
+
+.taskFormControl>input{
+  width: auto;
+  height: 20px;
+  margin: 10px 10px 20px 10px;
+}
+
+input[type="submit"]{
+ background-color: black;
+ width: 500px;
+ height: 40px;
+ font-size: 1.4rem;
+ color: white;
+ border: none;
+ outline: none;
+ cursor: pointer;
+ border-radius: 7px;
+ font-weight: 500;
+ margin: 10px;
+}
+
+
+.taskAddForm{
+  width: auto;
+  height: auto;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
